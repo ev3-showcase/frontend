@@ -25,7 +25,7 @@ SECRET_KEY = 'jq64i05p#v+aob#ku6-kwm8r&-*m&6vre394zhms0x61yc*bce'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -33,9 +33,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'dashboard.apps.DashboardConfig',
     'crispy_forms',
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
+    #'django.contrib.admin',
+    #'django.contrib.auth',
+    #'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -92,7 +92,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-DATABASES = {}
 
 MIGRATION_MODULES = {
     'auth': None,
