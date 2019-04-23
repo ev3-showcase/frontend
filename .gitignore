@@ -1,0 +1,7 @@
+*.sqlite3
+.vscode
+*/__pycache__
+media/profile_pics
+*.pyc
+*/migrations
+*/migrations/*
