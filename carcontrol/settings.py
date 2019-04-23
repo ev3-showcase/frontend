@@ -92,6 +92,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+DATABASES = {}
 
 MIGRATION_MODULES = {
     'auth': None,
