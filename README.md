@@ -31,9 +31,9 @@ To get this Application running within OpenShift following steps are necessary:
 - Search for the "Deployment config" part.
 Enter following information:
 
-|Name|Value|
-| ------------- |:-------------:| -----:|
-|DISABLE_MIGRATE|True|
+Name | Value
+------------ | -------------
+DISABLE_MIGRATE|True
 
 Click "Create" on the bottom.
 
