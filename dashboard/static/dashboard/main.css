@@ -82,3 +82,31 @@ body {
   .account-heading {
     font-size: 2.5rem;
   }
+
+  .c-brandbar__claim {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .c-brandbar__logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    padding: 6px 12px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .c-icon, .c-icon>svg {
+    display: inline-block;
+    height: 1em;
+    width: auto;
+    fill: currentColor;
