@@ -7,8 +7,10 @@ from distutils.util import strtobool
 import requests
 from .forms import CarControlForm
 
+API_SERVER = os.getenv('API_SERVER', '127.0.0.1')
+API_PORT = os.getenv('API_PORT', '5000')
+api = f'http://{API_SERVER}:{API_PORT}'
 
-api = os.getenv('API_SERVER', '127.0.0.1:5000')
 
 
 def dashboard(request):
