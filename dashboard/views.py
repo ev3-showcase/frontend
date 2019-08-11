@@ -7,8 +7,8 @@ from distutils.util import strtobool
 import requests
 from .forms import CarControlForm
 
-API_SERVER = os.getenv('API_SERVER', '127.0.0.1')
-API_PORT = os.getenv('API_PORT', '5000')
+API_SERVER = os.getenv('API_SERVER', 'echo-api-fk-sc.aotp012.mcs-paas.io')
+API_PORT = os.getenv('API_PORT', '80')
 api = f'http://{API_SERVER}:{API_PORT}'
 
 
@@ -37,9 +37,7 @@ def dashboard(request):
             messages.success(request, f'Instructions Transmitted. Speed: {speed}%, Steeringangle: {angle}%')
             messages.info(request, f'Message Posted to {url}')
             messages.info(request, f'Request Response: {r}')
-
-
-            return redirect('dashboard')
+    
     else: 
         form = CarControlForm()
     return render(request, 'dashboard/dashboard.html', {'form': form})
