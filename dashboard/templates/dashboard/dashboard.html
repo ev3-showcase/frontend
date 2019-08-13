@@ -1,17 +1,24 @@
 {% extends "dashboard/base.html" %}
 {% load crispy_forms_tags %}
 
-
 {% block content%}
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Control the Car:</legend>
-                {{ form|crispy }}
+                {{ form | crispy}}    
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Send it!</button>
+                <button class="btn btn-outline-primary" type="submit" id="los">Send it!</button>
+            </div>
+        </form>
+        <form method="POST">
+            {% csrf_token %}
+            <input name="angle" type="hidden" value="0">
+            <input name="speed" type="hidden" value="0">
+            <div class="form-group">
+                <button class="btn btn-outline-secondary" type="submit" id="stop">Stop!</button> 
             </div>
         </form>
     </div>

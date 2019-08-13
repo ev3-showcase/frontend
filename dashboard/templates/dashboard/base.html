@@ -7,9 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
     
-    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/main.css' %}" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" 
+    href="{% static 'dashboard/main.css' %}" 
+    crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">-->
     
     {% if title %}
     <title>Car Controller - {{ title }}</title>
@@ -21,13 +28,26 @@
     <header class="site-header">
             <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
                 <div class="container">
-                <a class="navbar-brand mr-4" href="{% url 'dashboard' %}">Control Dashboard</a>
+                <a class="navbar-brand mr-4 sizing" href="{% url 'dashboard' %}">
+                  <span class="c-icon ">
+                    <svg viewBox="0 0 75.7 37.2" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0,24.6V17.1H7.5v7.5H0Z" class="cls-1"></path> 
+                          <path d="M23,24.6V17.1h7.5v7.5H23Z"></path> 
+                          <path d="M45.6,24.6V17.1h7.5v7.5H45.6Z"></path> 
+                          <path d="M68.2,24.6V17.1h7.5v7.5H68.2Z"></path> 
+                          <path d="M30.1,0H0.4L0,13.1l2,0.3Q2.5,7.7,5,4.9a9.6,9.6,0,0,1,7.3-3.1V29.2c0,2.4-.3,4-1,4.7a4.8,4.8,0,0,1-3,1.1H6.1v2.1H24.4V35.1H22.3a4.8,4.8,0,0,1-3-1.1c-0.7-.7-1-2.3-1-4.7V1.8a9.6,9.6,0,0,1,7.3,3.1q2.5,2.8,3,8.6l2-.3Z"></path>
+                    </svg>
+                  </span>
+                </a>
+                <a class="navbar-brand mr-4" href="{% url 'dashboard' %}">
+                  Car Control
+                </a>  
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                    <a class="navbar-brand nav-item nav-link" href="{% url 'dashboard' %}">Dashboard</a>
                     </div>
                 </div>
                 </div>
@@ -56,6 +76,11 @@
         </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+    
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
