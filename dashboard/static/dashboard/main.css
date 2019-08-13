@@ -136,3 +136,26 @@ body {
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+.c-brandbar__logo{
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #fff;
+} 
+
+.u-color--inherit{
+  color: inherit;
+}
+
+.c-icon{
+  height: 0.5em;
+  width: auto;
+  fill: currentColor;
+}
+
+.sizing{
+  padding-top: 10px;
+  font-size: 10px;
+  width: 50px;
+}
