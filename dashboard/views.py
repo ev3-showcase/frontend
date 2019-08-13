@@ -19,22 +19,19 @@ def dashboard(request):
         if form.is_valid():
 
             speed = form.cleaned_data.get('speed')
-            angle = form.cleaned_data.get('angle')
 
             message = {
                     'speed': 0,
-                    'steering': 0,
                     }
             
             message['speed'] = speed
-            message['steering'] = angle
 
             #publish messages
             url = f'{api}/api/v1/publish/message'
             payload = message
             headers = {'content-type': 'application/json'}
             r = requests.post(url, data=json.dumps(payload), headers=headers)
-            messages.success(request, f'Instructions Transmitted. Speed: {speed}%, Steeringangle: {angle}%')
+            messages.success(request, f'Instructions Transmitted. Speed: {speed}%')
             messages.info(request, f'Message Posted to {url}')
             messages.info(request, f'Request Response: {r}')
     
